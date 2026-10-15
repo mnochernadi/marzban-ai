@@ -146,3 +146,10 @@ JOB_RECORD_NODE_USAGES_INTERVAL = config("JOB_RECORD_NODE_USAGES_INTERVAL", cast
 JOB_RECORD_USER_USAGES_INTERVAL = config("JOB_RECORD_USER_USAGES_INTERVAL", cast=int, default=10)
 JOB_REVIEW_USERS_INTERVAL = config("JOB_REVIEW_USERS_INTERVAL", cast=int, default=10)
 JOB_SEND_NOTIFICATIONS_INTERVAL = config("JOB_SEND_NOTIFICATIONS_INTERVAL", cast=int, default=30)
+
+# Mirrors a remote share-link subscription into the panel's inbounds as hosts.
+# Off unless a URL is set, so an untouched install behaves exactly as before.
+INBOUND_SYNC_ENABLED = config("INBOUND_SYNC_ENABLED", cast=bool, default=False)
+INBOUND_SYNC_SUB_URL = config("INBOUND_SYNC_SUB_URL", default="")
+INBOUND_SYNC_INTERVAL = config("INBOUND_SYNC_INTERVAL", cast=int, default=1800)
+INBOUND_SYNC_TIMEOUT = config("INBOUND_SYNC_TIMEOUT", cast=int, default=30)
