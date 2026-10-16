@@ -153,3 +153,7 @@ INBOUND_SYNC_ENABLED = config("INBOUND_SYNC_ENABLED", cast=bool, default=False)
 INBOUND_SYNC_SUB_URL = config("INBOUND_SYNC_SUB_URL", default="")
 INBOUND_SYNC_INTERVAL = config("INBOUND_SYNC_INTERVAL", cast=int, default=1800)
 INBOUND_SYNC_TIMEOUT = config("INBOUND_SYNC_TIMEOUT", cast=int, default=30)
+# Domain the mirrored servers are fronted by. When set, every mirrored ws/xhttp
+# host uses it as its Host header, and every TLS link uses it as its SNI, so the
+# links work through the operator's own proxy instead of the upstream CDN.
+INBOUND_SYNC_FRONT_HOST = config("INBOUND_SYNC_FRONT_HOST", default="")
